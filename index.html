@@ -4,28 +4,21 @@
         <style>
             body {
                 -webkit-appearance: none;
+                -moz-appearance: none;
                 font-family: arial,sans-serif;
-                /*min-height: 775px;*/
-                min-width: 1136px;
+                min-width: 975px;
                 color: #555;
-                /*margin: 10px;*/
+                margin:0;
+                font-size: 13px;
             }
             header {
-                min-width: 975px;
                 height:80px;
             }
             ul {
                 list-style-type: none;
                 list-style-position:outside;
-                font-size: 13px;
-                /*margin: auto;
-                color: #555;
-                height:0px;
-                margin-left:0px;
-                float: left;
-                width: 100%;*/
                 position: relative;
-                right: 32px;
+                right: 24px;
             }
             li {
                 background-color:greenyellow;
@@ -47,10 +40,6 @@
             .right{
                 float: right;
             }
-            .tester {
-                height: 40px;
-                background-color: red;
-            }
             .Apps {
                 background-color:#777;
                 height:18px;
@@ -69,39 +58,26 @@
             .GoogleLogo {
                 height: 92px;
                 display: block;
-                padding-top: 109px;
+                padding: 104px 0px 26px 0px;
                 margin: auto;
-            }
-            #Logo {
-                height: 200px;
-                /*width:100%;*/
-                min-width: inherit;
-                /*margin: auto;*/
-                padding-bottom: 10px;
-                position: static;
             }
             form {
                 margin: auto;
             }
             #SearchBox {
                 height: 46px;
-                width: 482px;
+                width: 392px;
                 padding: 0px 45px 0px 45px;
-                border-width: 1px;
                 margin-top: 20px;
-                margin-left: auto;
-                margin-right: auto;
-                border-style: solid;
-                border-color: #ddd;
+                margin: auto;
+                border:1px solid #ddd;
                 border-radius: 23px;
                 display: block;
-                background-image: url('searchicon.png');
-                position: relative;
-                left: 20px;
+                /*background-image: url('https://www.pinclipart.com/picdir/middle/485-4851736_free-png-search-icon-search-icon-free-download.png');*/
             }
             .SearchButtons {
                 height:50px;
-                width:fit-content;
+                width: fit-content;
                 margin: auto;
                 padding-top: 20px;
                 font-size: 16px;
@@ -121,7 +97,22 @@
                 border: 2px;
                 border-color: #ccc;
             }
-            footer {}
+            footer {
+                width:100%;
+                height:40px;
+                border-top:solid 1px #ddd;
+                background-color:#eee;
+                font-size: 14px;
+                position:fixed;
+                bottom: 0px;
+                z-index: -1;
+            }
+            footer a {
+                text-decoration: none;
+                height:14px;
+                padding: 13px 0 13px 27px;
+                color:inherit;
+            }
             </style>
 
     </head>
@@ -139,13 +130,9 @@
                 </div>
             </ul>
         </header>
-        <!--
-        /*<div class=tester></div>
-        -->
 
-        <div id="Logo">
-            <img class="GoogleLogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
-        </div>
+        <img class="GoogleLogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+        
         <form>
             <label for="SearchBox"></label>
             <input type="text" id="SearchBox" name="SearchBox">
@@ -156,13 +143,15 @@
                 <input type="submit" id="Lucky" class="Button right" name="Lucky" value="I'm Feeling Lucky">
             </div>
         </form>
+
         <footer>
-
+            <a class="left" href="Advertising.html">Advertising</a>
+            <a class="left" href="Business.html">Business</a>
+            <a class="left" href="Works.html">How Search works</a>
+            <a class="right"></a>
+            <a class="right" href="Settings.html">Settings</a>
+            <a class="right" href="Terms.html">Terms</a>
+            <a class="right" href="Privacy.html">Privacy</a>
         </footer>
-
-
-
     </body>
-
-
 </html>
