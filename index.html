@@ -41,17 +41,24 @@
                 float: right;
             }
             .Apps {
+                margin:0px;
+            }    
+            .pip {
+    	        width:4px;
+                height:4px;
+                border:1px solid white;
                 background-color:#777;
-                height:18px;
+                float: right;
+            }
+            .pipRow {
+    	        height: 6px;
                 width:18px;
-                margin: 0px 8px 0px 0px;
-                position: relative;
-                bottom: 1px;
             }
             .SignIn {
                 color: #fff;
                 background-color: #4285f4;
                 margin-right: 0px;
+                margin-left: 7px;
                 padding: 7.5px 14px;
                 font-weight:bold;
             }
@@ -63,21 +70,40 @@
             }
             form {
                 margin: auto;
+                position:relative;
+                right:0;
+            }
+            .SBox {
+                margin:auto;
+                width:max-content;
+                display:block;
             }
             #SearchBox {
-                height: 46px;
+                height: 44px;
                 width: 392px;
                 padding: 0px 45px 0px 45px;
-                margin-top: 20px;
-                margin: auto;
                 border:1px solid #ddd;
-                border-radius: 23px;
-                display: block;
-                /*background-image: url('https://www.pinclipart.com/picdir/middle/485-4851736_free-png-search-icon-search-icon-free-download.png');*/
+                border-radius: 22px;
+                display: inline-block;
+                font-size: 16px;
+                background-image: url(resources/search.png);
+                background-repeat:no-repeat;
+                background-position: 16px 15px;
+                background-size: 16px;
+                position:relative;
+                left:15px;
+                outline:none;
+            }
+            a.voice img {
+                position:relative;
+                top:6px;
+                right:28px;
+                height:24px;
+                width:24px;
             }
             .SearchButtons {
                 height:50px;
-                width: fit-content;
+                width:max-content;
                 margin: auto;
                 padding-top: 20px;
                 font-size: 16px;
@@ -87,7 +113,7 @@
                 border-radius: 4px;
                 height: 36px;
                 width: auto;
-                margin: 11px 8px;
+                margin: 11px 7px;
                 background-color: #eee;
                 color: #555;
                 font-size: 14px;
@@ -122,8 +148,22 @@
                 <li><a class="left" href="about.html">About</a></li>
                 <li><a class="left" href="store.html">Store</a></li>
                 <li><a class="right SignIn" href="SignIn.html">Sign in</a></li>
-                <li><a class="right" href="Apps.html">
-                    <div><div class="Apps"></div></div>
+                <li><a class="right Apps" href="Apps.html">
+                        <div class="pipRow">
+                            <span class="pip"></span>
+                            <span class="pip"></span>
+                            <span class="pip"></span>
+                        </div>
+                        <div class="pipRow">
+                            <span class="pip"></span>
+                            <span class="pip"></span>
+                            <span class="pip"></span>
+                        </div>
+                        <div class="pipRow">
+                            <span class="pip"></span>
+                            <span class="pip"></span>
+                            <span class="pip"></span>
+                        </div>
                 </a></li>
                 <li><a class="right" href="Images.html">Images</a></li>
                 <li><a class="right" href="Gmail.html">Gmail</a></li>
@@ -134,8 +174,13 @@
         <img class="GoogleLogo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
         
         <form>
-            <label for="SearchBox"></label>
-            <input type="text" id="SearchBox" name="SearchBox">
+            <span class="SBox">
+                <label for="SearchBox"></label>
+                <input type="text" id="SearchBox" name="SearchBox">
+                <a class="voice" href="voicesearch.html">
+                    <img src="resources/googlemic_color_24dp.png">
+                </a>
+            </span>
             <div class="SearchButtons">
                 <label for="Search"></label>
                 <input type="submit" id="Search" class="Button left" name="Search" value="Google Search">
@@ -143,7 +188,6 @@
                 <input type="submit" id="Lucky" class="Button right" name="Lucky" value="I'm Feeling Lucky">
             </div>
         </form>
-
         <footer>
             <a class="left" href="Advertising.html">Advertising</a>
             <a class="left" href="Business.html">Business</a>
